@@ -1,25 +1,27 @@
 package src.main.java;
 
 public class Counter {
-	private int count;
 
+	private int count;
+	
 	public Counter() {
-		this.count = 0;
+		this.reset();
+	}
+		
+	public void reset() {
+		count = 0;
 	}
 	
-	public Counter(int initial) {
-		this.count = initial;
-	}
-
-	public int getCount() {
-		return count;
-	}
-
 	public void increment() {
 		count++;
 	}
-
+	
 	public void decrement() {
 		count--;
 	}
+	
+	public int getCount() {
+		return count;
+	}
+	
 }

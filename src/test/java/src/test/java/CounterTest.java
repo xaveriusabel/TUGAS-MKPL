@@ -10,22 +10,22 @@ public class CounterTest {
 	public void testReset() {
 		Counter testCounter = new Counter();
 		
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i <10; i++) {
 			testCounter.increment();
 		}
 		
 		testCounter.reset();
 		
-		assertEquals(0, testCounter.getCount());
+		assertEquals(testCounter.getCount(), 0);
 	}
 
 	@Test
 	public void testIncrement() {
 		Counter testCounter = new Counter();
 		
-		for(int i = 1; i < 10; i++) {
+		for(int i = 1; i <10; i++) {
 			testCounter.increment();
-			assertEquals(i, testCounter.getCount());
+			assertEquals(testCounter.getCount(), i);
 		}
 	}
 
@@ -33,9 +33,9 @@ public class CounterTest {
 	public void testDecrement() {
 		Counter testCounter = new Counter();
 		
-		for(int i = 1; i < 10; i++) {
+		for(int i = 1; i <10; i++) {
 			testCounter.decrement();
-			assertEquals(i * -1, testCounter.getCount());
+			assertEquals(testCounter.getCount(), i * -1);
 		}
 	}
 
